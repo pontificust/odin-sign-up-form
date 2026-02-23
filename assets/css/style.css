@@ -413,7 +413,6 @@ cite,
 code,
 del,
 dfn,
-em,
 img,
 ins,
 kbd,
@@ -475,7 +474,6 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 html {
@@ -562,16 +560,19 @@ body {
     justify-content: center;
     gap: 30px;
     background-color: #f2f4f7;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .form__title-wrapper {
-    font-size: clamp(1rem, 2vw, 2rem);
-    max-width: 620px;
+    font-size: min(1.9rem, 3vw);
     font-weight: 600;
+    max-width: 630px;
     padding: 0 40px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .form__fields {
@@ -641,6 +642,12 @@ body {
     background-color: #596D48;
     border: none;
     box-shadow: 5px 5px 5px #00000020;
+}
+
+.form__submit-link {
+    color: #596D48;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 /*form style end*/
