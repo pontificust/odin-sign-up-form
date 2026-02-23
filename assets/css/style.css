@@ -475,6 +475,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 html {
@@ -502,7 +503,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
 }
 
 .main {
@@ -510,12 +510,13 @@ body {
     justify-content: center;
     width: 100%;
     height: 80%;
+    background-color: #fff;
 }
 
 /* hero styles start */
 
 .hero {
-    width: 33vw;
+    width: min(475px, 33vw);
     background-image: url('../img/mushroom.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -554,6 +555,92 @@ body {
 
 /*form styles start*/
 
+.form {
+    width: min(700px, 66vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    background-color: #f2f4f7;
+}
 
+.form__title-wrapper {
+    font-size: clamp(1rem, 2vw, 2rem);
+    max-width: 620px;
+    font-weight: 600;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form__fields {
+    background-color: #fff;
+    padding: 20px 0 40px 40px;
+    box-shadow: 0 5px 0 #00000010;
+}
+
+.form__fields-title {
+    margin-bottom: 20px;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 600;
+}
+
+.form__controls-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 50px;
+    row-gap: 15px;
+}
+
+.form__field-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    font-size: 1rem;
+}
+
+.form__field-label {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.form__field {
+    padding: 5px 8px;
+    font-size: 1.6rem;
+    border: 1px solid #E5E7EB;
+    transition: all 0.3s;
+    border-radius: 5px;
+}
+
+.form__field:focus,
+.form__field:focus-visible {
+    outline: none;
+    border-color: blue;
+    box-shadow: 5px 5px 5px #00000020;
+}
+
+.form__field:invalid {
+    border-color: red;
+}
+
+.form__submit {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    font-size: 1.6rem;
+}
+
+.form__submit-button {
+    padding: 12px 45px;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #596D48;
+    border: none;
+    box-shadow: 5px 5px 5px #00000020;
+}
 
 /*form style end*/
